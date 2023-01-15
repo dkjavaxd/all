@@ -1,13 +1,12 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         int num1Ost, num2Ost, num3Ost, num4Ost, num5Ost, num6Ost; /*num 1 Ostatok - каждый раз от числа отщепляем по
         одной цифре с конца*/
-        for (; ; ) {
+        ArrayList<Integer> historyOfTheGame = new ArrayList<Integer>();
+        while (true) {
             Scanner numEntered = new Scanner(System.in);
-            ArrayList<Integer> historyOfTheGame = new ArrayList<Integer>();
             System.out.print("Введите число: ");
             int num = numEntered.nextInt();
             historyOfTheGame.add(num);
@@ -28,7 +27,7 @@ public class Main {
                 else
                     System.out.println("Число не явл/ счастливым((");
             }
-            else if (num == 007) {
+            else if (num == 4) {
                 System.out.println("Выведены элементы массива история");
                 System.out.println(historyOfTheGame);
             }
